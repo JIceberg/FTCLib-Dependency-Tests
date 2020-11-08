@@ -19,7 +19,7 @@ public class NoMotorCache extends LinearOpMode {
         start = (double)System.nanoTime() * 1E-9;
         while (opModeIsActive() && setPower <= 1) {
             motor.setPower(setPower);
-            setPower += 0.05;
+            setPower += 0.01;
             currentStamp = (double)System.nanoTime() * 1E-9;
             telemetry.addData("Loop Time", (currentStamp - start)/++numLoops);
             telemetry.update();
