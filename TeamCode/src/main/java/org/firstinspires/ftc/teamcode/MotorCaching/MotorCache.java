@@ -23,7 +23,7 @@ public class MotorCache extends LinearOpMode {
                     motor.setPower(setPower);
                     prevSpeed = setPower;
                 }
-                setPower += 0.05;
+                setPower += 0.01;
                 currentStamp = (double)System.nanoTime() * 1E-9;
                 telemetry.addData("Loop Time", (currentStamp - start)/++numLoops);
                 telemetry.update();
