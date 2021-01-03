@@ -38,6 +38,7 @@ public class StateMachineOpMode extends LinearOpMode {
                         driverOp.getLeftY(),
                         driverOp.getRightX()
                 ))
+                .transitionOn(State.IDLE, () -> false)  // never transition
                 .build();
 
         while (opModeLoop.isRunning()) {
